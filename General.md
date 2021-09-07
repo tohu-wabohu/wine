@@ -93,6 +93,11 @@ git branch -d localBranchName                    # delete branch locally
 git push origin --delete remoteBranchName        # delete branch remotely
 ```
 
+Update the local list of remote branches:
+```
+git remote update origin --prune
+```
+
 # IPv6
 
 Disable IPv6:
