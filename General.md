@@ -1,3 +1,10 @@
+# Zipping, Tarring, archiving, etc...
+
+Tar example:
+```
+tar -C /foobar_path/ -cvf foobar.tar foobar/
+```
+
 # SSL/VPN/...
 
 ## CA, server & client certs with EasyRSA
