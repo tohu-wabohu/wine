@@ -76,6 +76,11 @@ xtrabackup example:
 xtrabackup --backup --stream=xbstream --compress --target-dir=./ > /dump/foobar.xbstream
 ```
 
+mydumper example:
+```
+mydumper -B foobar_db --triggers --events --routines --compress --rows=10000 -t 8 --trx-consistency-only --outputdir /dump/foobar_db/
+```
+
 # Git
 
 Delete git history:
