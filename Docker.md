@@ -10,6 +10,7 @@ services:
       - "8000:8000"
     mem_limit: 4g
 
+  # Set an alternative Dockerfile in docker-compose.yml
   mysql:
     image: mysql:8.0
     build:
