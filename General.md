@@ -71,9 +71,10 @@ mysqldump example:
 mysqldump --quick --master-data --single-transaction foobar | lz4  > /dump/foobar.sql.lz4
 ```
 
-xtrabackup example:
+xtrabackup, xbstream examples:
 ```
 xtrabackup --backup --stream=xbstream --compress --target-dir=./ > /dump/foobar.xbstream
+xbstream --decompress -x -C /dump/foobar <  foobar.xbstream
 ```
 
 mydumper example:
