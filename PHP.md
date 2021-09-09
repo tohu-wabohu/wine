@@ -1,0 +1,10 @@
+#PHP
+
+Examples:
+```
+<?php
+
+phpinfo();
+
+?>
+```
