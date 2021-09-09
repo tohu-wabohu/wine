@@ -21,3 +21,24 @@ services:
     image: ubuntu:20.04
     command: sleep infinity
 ```
+
+Dockerfile example:
+```
+FROM ubuntu:20.04
+
+SHELL ["/bin/bash", "-c"]
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get upgrade -y && apt-get install -y \
+  procps \
+  iproute2 \
+  dnsutils \
+  iputils-ping \
+  git \
+  curl \
+  wget \
+  vim \
+  # ---- other packages -----
+  && rm -rf /var/lib/apt/lists/*
+```
