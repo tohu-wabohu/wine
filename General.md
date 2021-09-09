@@ -77,10 +77,11 @@ xtrabackup --backup --stream=xbstream --compress --target-dir=./ > /dump/foobar.
 xbstream --decompress -x -C /dump/foobar <  foobar.xbstream
 ```
 
-mydumper example:
+mydumper, myloader examples:
 ```
-mydumper -B foobar_db --triggers --events --routines --compress --rows=10000 -t 8 --trx-consistency-only \ 
-  --outputdir /dump/foobar_db/
+mydumper -B foobar --triggers --events --routines --compress --rows=10000 -t 8 --trx-consistency-only \ 
+  --outputdir /dump/foobar/
+myloader --directory=/dump/foobar/ --queries-per-transaction=10000 --threads=8"
 ```
 
 # Git
