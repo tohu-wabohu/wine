@@ -9,6 +9,9 @@ services:
     ports:
       - "8000:8000"
     mem_limit: 4g
+    dns:
+      - 8.8.8.8
+      - 4.4.4.4
 
   # Set an alternative Dockerfile in docker-compose.yml
   mysql:
