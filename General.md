@@ -84,6 +84,18 @@ mydumper -B foobar --triggers --events --routines --compress --rows=10000 -t 8 -
 myloader --directory=/dump/foobar/ --queries-per-transaction=10000 --threads=8"
 ```
 
+# PostgreSQL
+
+General commands:
+```
+\l        - list databases
+```
+
+Backup & Restore:
+```
+pg_dump foobar > foobar.bak
+```
+
 # Git
 
 Delete git history:
