@@ -97,7 +97,8 @@ ALTER USER foobar WITH PASSWORD 'new_secret';
 
 Backup & Restore:
 ```
-pg_dump foobar > foobar.bak
+pg_dump foobar > foobar.sql
+sqpl < foobar.sql
 ```
 
 # Git
@@ -138,4 +139,12 @@ GRUB_CMDLINE_LINUX="ipv6.disable=1"
 GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
 
 update-grub
+```
+
+# GPG
+
+```
+gpg -c /tmp/foobar.txt            - Encrypt with a symmetric cipher using a passphrase.
+gpg /tmp/foobar.txt.gpg           - Decrypt file.
+gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when it’s needed.
 ```
