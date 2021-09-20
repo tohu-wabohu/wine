@@ -45,3 +45,9 @@ RUN apt-get update && apt-get upgrade -y && apt-get install -y \
   # ---- other packages -----
   && rm -rf /var/lib/apt/lists/*
 ```
+
+Join nodes to swarm - retrieve the join command including the join token:
+```
+docker swarm join-token worker                # as a worker node
+docker swarm join-token manager               # as a manager node
+```
