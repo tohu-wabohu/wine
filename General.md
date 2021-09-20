@@ -89,6 +89,10 @@ myloader --directory=/dump/foobar/ --queries-per-transaction=10000 --threads=8"
 General commands:
 ```
 \l        - list databases
+\du       - list users
+
+CREATE USER foobar WITH SUPERUSER PASSWORD 'secret';
+ALTER USER foobar WITH PASSWORD 'new_secret';
 ```
 
 Backup & Restore:
