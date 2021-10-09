@@ -148,3 +148,10 @@ gpg -c /tmp/foobar.txt            - Encrypt with a symmetric cipher using a pass
 gpg /tmp/foobar.txt.gpg           - Decrypt file.
 gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when it’s needed.
 ```
+
+# Text Manipulations
+
+Uncoment `deb-src` in /etc/apt/sources.list
+```
+sed -i '/deb-src/s/^# //' /etc/apt/sources.list && apt update
+```
