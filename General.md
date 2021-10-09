@@ -151,7 +151,7 @@ gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when itâ
 
 # Text Manipulations
 
-Uncoment `deb-src` in /etc/apt/sources.list
+Uncomment `deb-src` in /etc/apt/sources.list
 ```
 sed -i '/deb-src/s/^# //' /etc/apt/sources.list && apt update
 ```
