@@ -151,7 +151,12 @@ gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when itâ
 
 # Text Manipulations
 
-Uncomment `deb-src` in /etc/apt/sources.list
+Uncomment `deb-src` in /etc/apt/sources.list:
 ```
 sed -i '/deb-src/s/^# //' /etc/apt/sources.list && apt update
+```
+
+Add a string after some specific line:
+```
+sed '/optflags=/ s/$/ --without-capabilities/g'  pure-ftpd-1.0.49/debian/rules
 ```
