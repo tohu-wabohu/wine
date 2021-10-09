@@ -130,6 +130,11 @@ Update the local list of remote branches:
 git remote update origin --prune
 ```
 
+Replace master branch with dev branch:
+```
+git push -f origin dev:master
+```
+
 # IPv6
 
 Disable IPv6:
