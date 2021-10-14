@@ -1,8 +1,15 @@
 # Zipping, Tarring, archiving, etc...
 
-Tar example:
+Tar examples:
 ```
 tar -C /foobar_path/ -cvf foobar.tar foobar/
+tar -I lz4 -cvf foobar.tar.lz4 foobar/
+lz4 -d foobar.tar.lz4 | tar -xv
+```
+
+SCP example:
+```
+scp -c aes128-ctr 10.0.0.1:/tmp/foobar.tar.gz .
 ```
 
 # SSL/VPN/...
