@@ -1,0 +1,9 @@
+version: "2.2"
+services:
+  wine:
+    container_name: wine
+    hostname: wine
+    build: .
+    image: wine:v0
+    ports:
+      - 5000:5000
