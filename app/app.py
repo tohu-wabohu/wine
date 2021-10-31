@@ -70,6 +70,7 @@ def pages_all(page):
    data = response.text
    html = markdown.markdown(data, extensions=['fenced_code'])
    return head + html + end
+   print ("test")
 
 if __name__ == '__main__':
    app.run('0.0.0.0', debug = True)

@@ -24,4 +24,5 @@ RUN pip install Flask requests markdown
 
 ADD app.py .
 
-CMD python3 app.py
+CMD sleep infinity
+#CMD python3 app.py

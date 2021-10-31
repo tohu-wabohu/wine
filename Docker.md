@@ -13,15 +13,12 @@ services:
       - 8.8.8.8
       - 4.4.4.4
 
-  # Set an alternative Dockerfile in docker-compose.yml
-  mysql:
-    image: mysql:8.0
+  foobar:
+    image: ubuntu:20.04
     build:
       context: /data/build
-      dockerfile: Dockerfile-mysql
-
-  ubuntu:
-    image: ubuntu:20.04
+      dockerfile: Dockerfile-foobar
+    restart: always
     command: sleep infinity
 ```
 
