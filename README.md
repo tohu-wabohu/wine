@@ -22,8 +22,12 @@ SELECT user, host FROM mysql.user;
 
 ### xtrabackup, xbstream examples:
 ```
-xbstream --decompress -x -C /dump/destination/ < /dump/myxtrabackup.xbstream
-xtrabackup --prepare --target-dir=/dump/destination/      # (2x)
+# Backup
+xtrabackup --backup --stream=xbstream --compress --target-dir=./ > /dump/foobar.xbstream
+
+# Restore
+xbstream --decompress -x -C /dump/foobar/ < /dump/foobar.xbstream
+xtrabackup --prepare --target-dir=/dump/foobar/      # (2x)
 ```
 
 # Ansible
