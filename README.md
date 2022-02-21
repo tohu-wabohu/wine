@@ -17,6 +17,11 @@ FLUSH PRIVILEGES;
 ```
 
 ```
+ALTER USER 'foobar'@'localhost' IDENTIFIED BY 'new_secret';
+FLUSH PRIVILEGES;
+```
+
+```
 SELECT user, host FROM mysql.user;
 ```
 
