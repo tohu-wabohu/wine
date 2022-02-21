@@ -78,12 +78,6 @@ mysqldump example:
 mysqldump --quick --master-data --single-transaction foobar | lz4  > /dump/foobar.sql.lz4
 ```
 
-xtrabackup, xbstream examples:
-```
-xtrabackup --backup --stream=xbstream --compress --target-dir=./ > /dump/foobar.xbstream
-xbstream --decompress -x -C /dump/foobar <  foobar.xbstream
-```
-
 mydumper, myloader examples:
 ```
 mydumper -B foobar --triggers --events --routines --compress --rows=10000 -t 8 --trx-consistency-only \ 
