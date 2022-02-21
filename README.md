@@ -30,6 +30,23 @@ xbstream --decompress -x -C /dump/foobar/ < /dump/foobar.xbstream
 xtrabackup --prepare --target-dir=/dump/foobar/      # (2x)
 ```
 
+### Replication
+```
+# create user for replication
+# edit users.sql
+-- Grants for 'repl'@'172.16.0.1'
+CREATE USER IF NOT EXISTS 'repl'@'172.16.0.1';
+ALTER USER 'repl2'@'172.16.0.1' IDENTIFIED BY 'secret';
+GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'repl'@'172.16.0.1';
+
+# Create repl user
+mysql < users.sql
+
+# On slave node enable replication
+CHANGE MASTER to MASTER_USER='repl', MASTER_PASSWORD='secret', MASTER_PORT=3306, MASTER_HOST='10.0.0.100', MASTER_AUTO_POSITION=1, GET_MASTER_PUBLIC_KEY=1;
+START SLAVE;
+```
+
 # Ansible
 ```
 ansible-playbook _foobar.yml --tags my_tag
