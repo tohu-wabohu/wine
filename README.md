@@ -36,7 +36,7 @@ xtrabackup --prepare --target-dir=/dump/foobar/      # (2x)
 # edit users.sql
 -- Grants for 'repl'@'172.16.0.1'
 CREATE USER IF NOT EXISTS 'repl'@'172.16.0.1';
-ALTER USER 'repl2'@'172.16.0.1' IDENTIFIED BY 'secret';
+ALTER USER 'repl'@'172.16.0.1' IDENTIFIED BY 'secret';
 GRANT REPLICATION SLAVE, REPLICATION CLIENT ON *.* TO 'repl'@'172.16.0.1';
 
 # Create repl user
