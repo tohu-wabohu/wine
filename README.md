@@ -70,3 +70,13 @@ ansible-playbook _foobar.yml --tags my_tag
 ```
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
+
+# JAVA
+### Code Examples
+```
+class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, World!"); 
+    }
+}
+```
