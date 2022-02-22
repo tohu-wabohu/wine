@@ -65,3 +65,8 @@ ansible-playbook _foobar.yml --tags my_tag
     foobar is not defined
 {% endif %}
 ```
+
+# iptables
+```
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+```
