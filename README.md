@@ -6,6 +6,11 @@
 https://www.lisenet.com/  
 https://vikyd.github.io/download-chromium-history-version/  
 
+# Linux
+```
+find foobar/ -maxdepth 1  -type d -empty -exec ls -l {} \;
+find foobar/ -maxdepth 1  -type d -not -empty -exec ls -l {} \;
+```
 
 # MySQL
 
