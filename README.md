@@ -12,6 +12,19 @@ find foobar/ -maxdepth 1  -type d -empty -exec ls -l {} \;
 find foobar/ -maxdepth 1  -type d -not -empty -exec ls -l {} \;
 ```
 
+# Git
+Quick add, commit, push:
+```
+git add -A; git commit -m "up"; git push
+git add -A; git commit -m "up"; git push --force-with-lease    # after branch rebase
+```
+
+Delete branches:
+```
+git branch -d localBranchName                    # delete branch locally
+git push origin --delete remoteBranchName        # delete branch remotely
+```
+
 # MySQL
 
 ```
