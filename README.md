@@ -25,6 +25,11 @@ git branch -d localBranchName                    # delete branch locally
 git push origin --delete remoteBranchName        # delete branch remotely
 ```
 
+Get hash:
+```
+git rev-parse --short HEAD
+```
+
 # MySQL
 
 ```
