@@ -30,6 +30,39 @@ Get hash:
 git rev-parse --short HEAD
 ```
 
+# Gluster
+Install server
+```
+add-apt-repository ppa:gluster/glusterfs-10
+apt update
+apt install glusterfs-server
+
+systemctl start glusterd.service
+systemctl enable glusterd.service
+systemctl status glusterd.service
+
+gluster peer probe lab02
+gluster peer probe lab03
+gluster peer status
+
+gluster volume create gluster_vol replica 3 lab01:/gluster01_vol lab02:/gluster01_vol lab03:/gluster01_vol force
+gluster volume start gluster_vol
+
+gluster volume add-brick gluster_vol replica 4 lab04:/gluster01_vol force
+gluster volume remove-brick gluster_vol replica 3 lab03:/gluster01_vol force
+gluster peer detach lab03
+```
+Install client
+```
+add-apt-repository ppa:gluster/glusterfs-10
+apt update
+apt install glusterfs-client
+mkdir /gluster01
+
+echo "lab01:gluster01_vol /gluster01 glusterfs defaults,_netdev 0 0" >> /etc/fstab
+mount -a
+```
+
 # MySQL
 
 ```
