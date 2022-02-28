@@ -12,6 +12,20 @@ find foobar/ -maxdepth 1  -type d -empty -exec ls -l {} \;
 find foobar/ -maxdepth 1  -type d -not -empty -exec ls -l {} \;
 ```
 
+```
+ls -1                                                  # list one file per line
+$(date --date="$(date +%Y-%m-15) -1 month" +'%m')      # get last month number
+```
+
+### Disable IPv6
+```
+# vi /etc/default/grub
+GRUB_CMDLINE_LINUX="ipv6.disable=1"
+GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
+
+update-grub
+```
+
 # Git
 Quick add, commit, push:
 ```
