@@ -7,6 +7,11 @@ tar -I lz4 -cvf foobar.tar.lz4 foobar/
 lz4 -d foobar.tar.lz4 | tar -xv
 ```
 
+Rsync:
+```
+rsync -azP /foobar /destination/
+```
+
 SCP example:
 ```
 scp -c aes128-ctr 10.0.0.1:/tmp/foobar.tar.gz .
