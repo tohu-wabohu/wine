@@ -160,16 +160,6 @@ gpg /tmp/foobar.txt.gpg           - Decrypt file.
 gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when it’s needed.
 ```
 
-# KVM
-
-```
-virsh dumpxml foobar > foobar.xml
-virsh define foobar.xml
-```
-```
-qemu-img resize mydisk.qcow2 +10G
-```
-
 # Text Manipulations
 
 Uncomment `deb-src` in /etc/apt/sources.list:

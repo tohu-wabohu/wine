@@ -141,6 +141,16 @@ ansible-playbook _foobar.yml --tags my_tag
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
 
+# KVM
+
+```
+virsh dumpxml foobar > foobar.xml
+virsh define foobar.xml
+
+qemu-img resize mydisk.qcow2 +10G
+```
+
+
 # JAVA
 ### Code Examples
 ```
