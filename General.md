@@ -166,6 +166,9 @@ gpgconf --kill gpg-agent          - Kill GPG agnet. It will start again when itâ
 virsh dumpxml foobar > foobar.xml
 virsh define foobar.xml
 ```
+```
+qemu-img resize mydisk.qcow2 +10G
+```
 
 # Text Manipulations
 
