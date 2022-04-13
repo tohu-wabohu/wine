@@ -150,6 +150,10 @@ virsh define foobar.xml
 qemu-img resize mydisk.qcow2 +10G
 ```
 
+```
+osinfo-query os
+```
+
 
 # JAVA
 ### Code Examples
