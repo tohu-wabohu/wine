@@ -143,6 +143,13 @@ iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 
 # KVM
 
+Install VM:
+```
+virt-install --name ubuntu20.04 --memory 2048 --vcpus 2 --disk size=8 \
+  --location /home/spirit/install/ubuntu-20.04.4-live-server-amd64.iso,kernel=casper/vmlinuz,initrd=casper/initrd \
+  --os-variant ubuntu20.04 --graphics none --extra-args='console=ttyS0,115200n8 serial'
+```
+
 ```
 virsh dumpxml foobar > foobar.xml
 virsh define foobar.xml
