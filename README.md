@@ -161,6 +161,14 @@ qemu-img resize mydisk.qcow2 +10G
 osinfo-query os
 ```
 
+### Bugs
+Cloned VM acquires the same DHCP IP address  
+https://kb.vmware.com/s/article/82229  
+
+Add to netplan config:
+```
+dhcp-identifier: mac
+```
 
 # JAVA
 ### Code Examples
