@@ -17,44 +17,6 @@ SCP example:
 scp -c aes128-ctr 10.0.0.1:/tmp/foobar.tar.gz .
 ```
 
-# SSL/VPN/...
-
-## CA, server & client certs with EasyRSA
-
-Download EasyRSA from https://github.com/OpenVPN/easy-rsa/releases
-
-Generate new CA and signed server cert:
-
-```
-cp vars.example vars
-
-# vi vars
-#. . .
-set_var EASYRSA_REQ_COUNTRY    "US"
-set_var EASYRSA_REQ_PROVINCE   "NewYork"
-set_var EASYRSA_REQ_CITY       "New York City"
-set_var EASYRSA_REQ_ORG        "DigitalOcean"
-set_var EASYRSA_REQ_EMAIL      "admin@example.com"
-set_var EASYRSA_REQ_OU         "Community"
-#. . .
-
-./easyrsa init-pki
-./easyrsa build-ca nopass
-
-./easyrsa gen-req server nopass
-./easyrsa sign-req server server
-
-./easyrsa gen-dh
-openvpn --genkey --secret ta.key
-```
-
-Generate new signed client cert:
-
-```
-./easyrsa gen-req client1 nopass
-./easyrsa sign-req client client1
-```
-
 # HDD/SSD/...
 
 ## Wipe SSD disk
