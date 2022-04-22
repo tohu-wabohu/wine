@@ -26,6 +26,17 @@ GRUB_CMDLINE_LINUX_DEFAULT="ipv6.disable=1"
 update-grub
 ```
 
+# HDD/SSD/...
+
+## Wipe SSD disk
+
+Just to be on a safe side, we'll erase data in three different ways:
+```
+dd if=/dev/urandom of=/dev/nvmeX bs=1M status=progress
+dd if=/dev/zero    of=/dev/nvmeX bs=1M status=progress
+blkdiscard -s /dev/nvmeX
+```
+
 # SSL/VPN/...
 
 ## CA, server & client certs with EasyRSA
