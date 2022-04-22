@@ -17,17 +17,6 @@ SCP example:
 scp -c aes128-ctr 10.0.0.1:/tmp/foobar.tar.gz .
 ```
 
-# HDD/SSD/...
-
-## Wipe SSD disk
-
-Just to be on a safe side, we'll erase data in three different ways:
-```
-dd if=/dev/urandom of=/dev/nvmeX bs=1M status=progress
-dd if=/dev/zero    of=/dev/nvmeX bs=1M status=progress
-blkdiscard -s /dev/nvmeX
-```
-
 # MySQL
 
 Get size of MySQL databases:
