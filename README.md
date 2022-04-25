@@ -37,6 +37,14 @@ dd if=/dev/zero    of=/dev/nvmeX bs=1M status=progress
 blkdiscard -s /dev/nvmeX
 ```
 
+### Encrypt with LUKS
+```
+cryptsetup luksFormat /dev/sdX
+cryptsetup open /dev/sdX foobar
+mkfs.ext4 /dev/mapper/foobar
+cryptsetup close foobar
+```
+
 # SSL/VPN/...
 
 ## CA, server & client certs with EasyRSA
