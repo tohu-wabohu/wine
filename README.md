@@ -231,6 +231,8 @@ dhcp-identifier: mac
 ### Cheatsheet:
 ```
 docker ps -a --filter volume=VOLUME_NAME_OR_MOUNT_POINT
+
+docker swarm init --advertise-addr 127.0.0.1 --listen-addr 127.0.0.1 --data-path-addr 127.0.0.1
 ```
 
 # JAVA
