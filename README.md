@@ -101,6 +101,11 @@ Get hash:
 git rev-parse --short HEAD
 ```
 
+After fetching, remove any remote-tracking branches which no longer exist on the remote.
+```
+git fetch --prune
+```
+
 # Gluster
 Install server
 ```
