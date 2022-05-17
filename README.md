@@ -235,6 +235,16 @@ docker ps -a --filter volume=VOLUME_NAME_OR_MOUNT_POINT
 docker swarm init --advertise-addr 127.0.0.1 --listen-addr 127.0.0.1 --data-path-addr 127.0.0.1
 ```
 
+# BASH
+### Code Examples
+```
+#!/bin/bash
+for i in {1..4}
+do
+   echo "i: $i"
+done
+```
+
 # JAVA
 ### Code Examples
 ```
