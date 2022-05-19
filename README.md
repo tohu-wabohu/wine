@@ -241,6 +241,11 @@ docker swarm init --advertise-addr 127.0.0.1 --listen-addr 127.0.0.1 --data-path
 ```
 
 # BASH
+### Text manipulations
+```
+sed -i '10d' file.txt             # delete 10th line
+```
+
 ### Code Examples
 ```
 #!/bin/bash
