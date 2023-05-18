@@ -65,29 +65,6 @@ Generate new signed client cert:
 ./easyrsa sign-req client client1
 ```
 
-# Git
-Quick add, commit, push:
-```
-git add -A; git commit -m "up"; git push
-git add -A; git commit -m "up"; git push --force-with-lease    # after branch rebase
-```
-
-Delete branches:
-```
-git branch -d localBranchName                    # delete branch locally
-git push origin --delete remoteBranchName        # delete branch remotely
-```
-
-Get hash:
-```
-git rev-parse --short HEAD
-```
-
-After fetching, remove any remote-tracking branches which no longer exist on the remote:
-```
-git fetch --prune
-```
-
 # Gluster
 Install server
 ```
